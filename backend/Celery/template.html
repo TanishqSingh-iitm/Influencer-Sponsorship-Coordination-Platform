@@ -1,0 +1,97 @@
+<!-- Box -->
+<div style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; margin-bottom: 20px;">
+    <h1 style="color: #009688;">{{sponsorname}} Monthly Report</h1>
+    <p>This box contains some introductory text or a summary.</p>
+</div>
+
+<!-- First Table -->
+<h2 style="color: #009688;">Campaigns:</h2>
+<table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-collapse: collapse; margin-bottom: 20px;">
+    <thead>
+        <tr style="background-color: #009688; color: #ffffff;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Title</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Description</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">StartedOn</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">EndOn</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Budget</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Target</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Progress</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Current</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">DateCreated</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Goal</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Related_Industry</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Related_Niche</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Visibility</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in campaigns %}
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.title }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.description }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.start_date }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.end_date }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.status }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.budget }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.target }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.progress }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.current }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.date_created }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.goal }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.related_industry }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.related_niche }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ data.visibility }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Second Table -->
+<h2 style="color: #009688;">Ads:</h2>
+<table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-collapse: collapse;">
+    <thead>
+        <tr style="background-color: #009688; color: #ffffff;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Title</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Description</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">BasePrice</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">NegociatedPrice</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">DateCreated</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for addata in ads %}
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ addata.title }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ addata.description }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ addata.status }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ addata.baseprice }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ addata.negociatedprice }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ addata.date_created }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2 style="color: #009688;">Transactions:</h2>
+<table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-collapse: collapse;">
+    <thead>
+        <tr style="background-color: #009688; color: #ffffff;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Transaction Type</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Description</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Date Created</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trdata in transactions %}
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ trdata.transaction_type }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ trdata.description }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ trdata.date_created }}</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">{{ trdata.amount }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+id,title,description,start_date,end_date,status,budget,target,progress,current,date_created,goal,related_industry,related_niche,visibility,active,sponsor_id
+1,Unleash the power 2,edited,2024-12-11T00:00:00,2024-12-14T17:57:21.257681,Completed,6000,100000,100,23000000,2024-12-11T19:11:58.714590,edited,Tech,TechReview,Private,False,4
+2,Unleash the power 4,edited,2024-12-11T00:00:00,2025-04-24T10:45:40.479016,Completed,6000,100000,0,0,2024-12-11T19:11:58.714590,edited,Tech,TechReview,Public,False,4

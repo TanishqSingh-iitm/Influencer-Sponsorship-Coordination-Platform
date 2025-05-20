@@ -1,0 +1,64 @@
+@import './base.css';
+
+#app {
+  margin: 0;
+  font-weight: normal;
+  width: 100%; /* Ensure app takes full width */
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(139, 64, 253);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(260, 100%, 75%, 0.2); /* Purple hover effect */
+  }
+}
+
+/* Responsive Design */
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Mobile View */
+@media (max-width: 450px) {
+  #app {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0px;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 451px) and (max-width: 800px) {
+  #app {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0px;
+  }
+}
+
+/* PC View */
+@media (min-width: 801px) {
+  #app {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0px;
+  }
+}

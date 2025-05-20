@@ -1,0 +1,46 @@
+{
+    "vuestart":{
+        "snippets":{
+            "vuestart":{
+                "prefix": "vuestart",
+                "body": [
+                    "<script setup>",
+                    "</script>",
+                    "<template>",
+                    "  <div>",
+                    "    $1",
+                    "  </div>",
+                    "</template>",
+                    "",
+                    "<script>",
+                    "export default {",
+                    "  name: '$2',",
+                    "  data() {",
+                    "    return {",
+                    "      $3",
+                    "    }",
+                    "  },",
+                    "  methods: {",
+                    "    $4",
+                    "  },",
+                    "  computed: {",
+                    "    $5",
+                    "  },",
+                    "  watch: {",
+                    "    $6",
+                    "  },",
+                    "  mounted() {",
+                    "    $7",
+                    "  }",
+                    "}",
+                    "</script>",
+                    "",
+                    "<style scoped>",
+                    "  $8",
+                    "</style>"
+                ],
+                "description": "Vue Start Template"
+            }
+        }
+    }
+}
