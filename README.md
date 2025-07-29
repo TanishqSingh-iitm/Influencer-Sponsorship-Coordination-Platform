@@ -61,7 +61,7 @@ A comprehensive, multi-user platform for seamless influencer marketing campaign 
 
 **View the complete ER diagram:**
 
-![Project Architecture Diagram](/"Database ER diagram (Mad 2 Project) ".png)
+![Database ER Diagram](Database%20ER%20diagram.png)
 
 ## API Design
 
